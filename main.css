@@ -6,9 +6,9 @@ html body{
     font-family: roboto;
 }
 
-p{
+/* p{
     overflow: hidden;
-}
+} */
 li,ul{
     margin:0;
     padding:0;
@@ -41,13 +41,30 @@ li,ul{
 .top-bar{
     display: flex;
     height: 60px;
-    background-color: dodgerblue;
+    /* background-color: dodgerblue; */
     margin-bottom: 10px;
+    align-items: center;
+}
+.enlarge{
+    margin-right: 30px;
+}
+.bx-wrapper{ /* jquery slider */
+    height: 100%;
+}
+.bx-viewport{
+    height: 100%;
 }
 .slider{
     background-color: #7f7aca;
     flex-grow: 1;
     margin-bottom: 10px;
+    height: 100%;
+}
+.picture{
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: 50% 50%;
 }
 .titles-bar{
     display: flex;
@@ -91,4 +108,54 @@ li,ul{
     flex-basis: 75%;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+@media (max-width: 480px){
+    p{
+        color:greenyellow;
+    }
+    .text{
+        font-size: 10px;
+    }
+    .title{
+        font-size: 15px;
+    }
+    .upper-part{
+        flex-basis: 40%;
+    }
+    .bx-wrapper{
+        margin-bottom: 38px;
+    }
+    .down-part{
+        flex-basis: 60%;
+    }
+    .titles-bar{
+        flex-wrap: wrap;
+        flex-basis: 60%;
+    }
+    .titles-bar__item{
+        flex-basis: 46%;
+        margin-left: 0;
+        max-height: 47%;
+    }
+    .body{
+        flex-basis: 40%;
+    }
+    .side-bar{
+        flex-basis: 35%;
+    }
+    .main-body{
+        flex-basis: 65%;
+    }
+}
+
+@media (max-width: 320px){
+    p{
+        color:red;
+    }
+    .text{
+        font-size: 7px;
+    }
+    .title{
+        font-size: 10px;
+    }
 }
