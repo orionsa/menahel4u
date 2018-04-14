@@ -1,14 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
 html body{
     margin:0 ;
     padding:0;
     font-family: roboto;
 }
-
-/* p{
-    overflow: hidden;
-} */
 li,ul{
     margin:0;
     padding:0;
@@ -16,14 +11,16 @@ li,ul{
 }
 .text{
     font-size: 15px;
+    color: #edf2fc;
 }
 .title{
     font-size: 25px;
+    color: #edf2fc;
 }
 .wraper{
     width:calc(100vw - 20px);
     height: calc(100vh - 20px);
-    background-color: pink;
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -41,17 +38,20 @@ li,ul{
 .top-bar{
     display: flex;
     height: 60px;
-    /* background-color: dodgerblue; */
     margin-bottom: 10px;
     align-items: center;
 }
 .enlarge{
     margin-right: 30px;
+    color: #edf2fc;
 }
-.bx-wrapper{ /* jquery slider */
+.shrink{
+    color: #edf2fc;
+}
+.bx-wrapper{ /* jquery slider class */
     height: 100%;
 }
-.bx-viewport{
+.bx-viewport{/* jquery slider class */
     height: 100%;
 }
 .slider{
@@ -110,8 +110,11 @@ li,ul{
     overflow: hidden;
 }
 @media (max-width: 480px){
-    p{
-        color:greenyellow;
+    .enlarge{
+        font-size: 15px;
+    }
+    .shrink{
+        font-size: 15px;
     }
     .text{
         font-size: 10px;
@@ -142,15 +145,18 @@ li,ul{
     }
     .side-bar{
         flex-basis: 35%;
+        margin-left: 5px;
     }
     .main-body{
         flex-basis: 65%;
     }
 }
-
 @media (max-width: 320px){
-    p{
-        color:red;
+    .enlarge{
+        font-size: 10px;
+    }
+    .shrink{
+        font-size: 10px;
     }
     .text{
         font-size: 7px;
